@@ -1,0 +1,25 @@
+ #include <iostream>
+#include<string.h>
+using namespace std;
+
+int main() {
+    int t,i,n,x,y,j;
+    char str[1000];
+    cin>>t;
+    while(t--){int z=0;
+        cin>>str;
+       n=strlen(str);
+       (n%2==0)?(y=n/2):(y=(n/2)+1);
+       for(i=0;i<n/2;i++){
+           for(j=y;j<n;j++){
+               if(str[i]==str[j]){
+                   str[j]=0;
+                   z++;
+                   break;
+               }
+       }
+    }
+    (z==n/2)?cout<<"YES \n":cout<<"NO \n";
+}
+	return 0;
+}
