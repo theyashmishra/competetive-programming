@@ -1,0 +1,16 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+float dtb,bs,fi,a,t,t1,t2;
+cin>>t;
+while(t--){
+    cin>>fi>>dtb>>a>>bs;
+    t1=fi/bs;
+    dtb=dtb+fi;
+    t2=sqrt((2*dtb)/a);
+    (t1<t2)?cout<<"Bolt \n":cout<<"Tiger \n";
+}
+	return 0;
+}
