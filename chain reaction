@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t,i,j,k,r,c;
+	cin>>t;
+	while(t--){k=0;
+	    cin>>r>>c;
+	    int a[r][c];
+	    for(i=0;i<r;i++){
+	        for(j=0;j<c;j++)
+	        cin>>a[i][j];
+	    }
+	    for(i=0;i<r;i++){
+	        for(j=0;j<c;j++){
+	            if(((i==0&&j==0)||(i==r-1&&j==c-1)||(i==0&&j==c-1)||(i==r-1&&j==0))&&(a[i][j]>1)){
+	                k++;
+	                break;
+	            }
+	            else if(((i==0)||(j==0)||(i==r-1)||(j==c-1))&&(a[i][j]>2)){
+	                k++;
+	                break;
+	            }
+	            else if(a[i][j]>3){
+	                k++;
+	                break;
+	            }
+	        }
+	    }
+	    (k==0)?cout<<"Stable\n":cout<<"Unstable\n";
+	}
+	return 0;
+}
