@@ -1,0 +1,32 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+int calc(long long int n){
+    if(n==0){
+        return n;
+    }
+    else{
+        return(n%10+calc(n/10));
+    }
+}
+
+int main() {
+	long long int t,x,y,n,i;
+	cin>>t;
+	while(t--){int a,b=0;
+	    cin>>n;
+	    x=pow(10,n-1);
+	    y=pow(10,n);
+	    for(i=x;i<y;i++){
+	        a=calc(i);
+	        if(a%10==0){
+	            b++;
+	        }
+	        if(b==n){
+	            break;
+	        }
+	    }
+	    cout<<i;
+	}
+	return 0;
+}
