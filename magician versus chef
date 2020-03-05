@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int t,n,x,s,z,c,b;
+	cin>>t;
+	while(t--){
+	    cin>>n>>x>>s;
+	    long int a[n],i;
+	    for(i=0;i<n;i++){
+	        a[i]=0;
+	    }
+	    a[x-1]=1;
+	    while(s--){
+	       cin>>b>>c;
+	       z=a[b-1];
+	       a[b-1]=a[c-1];
+	       a[c-1]=z;
+	    }
+	    (a[b-1]==1)?cout<<b<<"\n":cout<<c<<"\n";
+	    }
+	return 0;
+}
