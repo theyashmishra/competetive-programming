@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){long long int t,x,y,z,i;
+
+cin>>t;
+while(t--){
+    cin>>x>>y;
+    z=x;
+    for(i=x+1;i<=y;i++){
+        z=z^i;
+        
+    }
+   (z%2==0)?cout<<"Even"<<"\n":cout<<"Odd"<<"\n";
+}
+	return 0;
+}
