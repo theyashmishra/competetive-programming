@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include<math.h>
+int main(void) {
+	
+long long int n,x,i,y=0,z,a=0;
+	scanf("%lld%lld",&n,&x);
+	for(i=0;i<n;i++){
+	    z=x%10;
+	    if(z==0){a++;}
+	    else if(z==1){break;}
+	    x=x/10;}
+	    
+
+	printf("%lld",a);
+	return 0;
+}
