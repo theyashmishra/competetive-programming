@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t,n,i,j,l,r,k;
+	cin>>t;
+	while(t--){
+	    cin>>l>>r>>k;
+	  (l==r)?cout<<"1"<<"\n":cout<<k<<"\n";
+	}
+	return 0;
+}
