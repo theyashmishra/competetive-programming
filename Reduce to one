@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int t,i,n,x,y;
+cin>>t;
+while(t--){
+    cin>>n;
+    x=n;
+    for(i=1;i<n;i++){
+        x=x+i+(x*i);
+        x=x%1000000007;
+    } x=x%1000000007;
+    cout<<x<<"\n";
+}
+	return 0;
+}
