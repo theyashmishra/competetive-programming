@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long t,i,n,j,x,y;
+	cin>>t;
+	while(t--){i=0,y=0;int a[9];
+	    cin>>n;
+	    while(n){
+	        a[i]=n%10;
+	        n=n/10;
+	        i++;
+	    }
+	    for(j=i-1;j>0;j--){
+	        if(a[j]<a[j-1]){
+	            a[j+1]=0;
+	            x=1;
+	            break;
+	        }
+	    }
+	    if(x==0){a[i-1]=0;}
+	    for(j=i-1;j>=0;j--){
+	        y=y*10+a[j];
+	    }
+	    cout<<y<<"\n";
+	}
+	return 0;
+}
