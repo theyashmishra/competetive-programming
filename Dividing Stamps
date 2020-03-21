@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long int n,x=0,y,z,a;
+cin>>n;
+a=n;
+while(a--){
+    cin>>y;
+    x=x+y;
+}
+z=(n*(n+1))/2;
+(z==x)?cout<<"YES":cout<<"NO";
+	return 0;
+}
