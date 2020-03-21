@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int x,y,z,a,b,i,j,t;
+cin>>t;
+while(t--){
+    cin>>x>>y;
+    if(x%y==0||y==1){
+        cout<<x<<"\n";
+    
+    }
+    else if(y==0){
+        cout<<-1<<"\n";
+        
+    }
+        else{
+        a=x*10;b=10;
+        for(i=0;i<1000000000000000000;i++){
+            if(i>=b){
+                a=a*b;
+                b=b*b;
+                i=0;
+            }
+            z=a+i;
+            if(z%y==0){
+                cout<<z<<"\n";
+                break;
+            }
+            else if(z>1000000000000000000){
+                cout<<"-1"<<"\n";
+                break;
+            }
+        }
+    }
+}
+	return 0;
+}
