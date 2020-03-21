@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include<math.h>
+int main(void) {
+	int t;
+	float p,a,l1,l2,b1,b2,v1,v2,x;
+scanf("%d",&t);
+while(t--){
+    scanf("%f%f",&p,&a);
+    if(p<=a){
+        printf("0\n");
+    }
+    else{
+    x=sqrt((p*p)-(24*a));
+  if(((p*p)-(24*a))<0){
+        printf("0\n");
+        break;
+    }
+    b1=(p+x)/12;
+    b2=(p-x)/12;
+    l1=((p/4)-(2*b1));
+    l2=((p/4)-(2*b2));
+    if(b2<=0){
+        v1=l1*b1*b1;
+        printf("%0.2f",v1);
+    }
+    else{
+        v1=l1*b1*b1;
+        v2=l2*b2*b2;
+        (v1>v2)?printf("%0.2f\n",v1):printf("%0.2f\n",v2);
+    }
+    
+}
+}
+	return 0;
+}
+
