@@ -1,0 +1,31 @@
+#include <iostream>
+#include<string.h>
+using namespace std;
+
+int main() {
+	long long int t,i,j,x;
+	char s1[20],s2[20],s3[20];
+	cin>>t;
+	while(t--){
+	    cin>>x;
+	    cin>>s1;
+	    i=1;j=0;
+	    while(--x){
+	        cin>>s2;
+	        if(strcmp(s1,s2)==0){
+	            i++;
+	        }
+	        else{
+	            strcpy(s3,s2);
+	            j++;
+	        }
+	    }
+	    if(i==j){
+	        cout<<"Draw"<<"\n";
+	    }
+	    else{
+	        (i>j)?cout<<s1<<"\n":cout<<s3<<"\n";
+	    }
+	}
+	return 0;
+}
