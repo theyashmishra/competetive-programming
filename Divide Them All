@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	double t,n,m,x,y,a,b,c,d,e,i,f;
+	cin>>t;
+	while(t--){i=0;
+	    cin>>n>>m>>x>>y;
+	    a=n*x;
+	    b=m*y;
+	    (a<b)?c=m:c=n;
+	    (a<b)?f=1:f=2;
+	    d=(a+b)/2;
+	    while(c--&&f!=0){
+	        if(f==1){
+	            a=a+i*y;
+	            if(a==d){
+	                cout<<"YES\n";
+	                f=0;break;}
+	            }
+	            else if(f==2){
+	                b=b+i*x;
+	                if(b==d){
+	                    cout<<"YES\n";
+	                    f=0;break;
+	                }
+	            }
+	            i++;
+	        }
+	        if(f!=0){
+	            cout<<"NO\n";
+	        }
+	    
+	}
+	return 0;
+}
