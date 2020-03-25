@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	 int t,x,y,i;
+	 cin>>t;
+	 while(t--){x=y=0;
+	     char s[50];
+	     cin>>s;
+	     (s[0]=='U')?y++:x++;
+	     for(i=0;s[i]!='\0';i++){
+	         if(s[i]=='U'&&s[i+1]=='D'){
+	             x++;
+	         }
+	         else if(s[i+1]=='U'&&s[i]=='D'){
+	             y++;
+	         }
+	     }
+	     (x<y)?cout<<x<<"\n":cout<<y<<"\n";
+	 }
+	return 0;
+}
