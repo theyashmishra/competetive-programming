@@ -1,0 +1,48 @@
+// CPP program To calculate The Value Of nCr 
+#include <bits/stdc++.h> 
+using namespace std; 
+
+float fact(float n); 
+
+float nCr(float n, float r) 
+{ 
+	return fact(n) / (fact(r) * fact(n - r)); 
+} 
+
+// Returns factorial of n 
+float fact(float n) 
+{ 
+	float res = 1; 
+	for (float i = 2; i <= n; i++) 
+		res = res * i; 
+	return res; 
+} 
+
+// Driver code 
+int main() 
+{ 
+float t,n,q,x,a,b;
+float s,y;
+cin>>t;
+while(t--){s=0;
+cin>>n>>q;
+x=n+q;
+q--;
+a=x;
+while(x!=0){
+    if(x>1){
+        b=nCr(x-1,q);
+        
+        s=s+(b*x);
+       
+    }
+    x--;
+}
+y=nCr(a,q+1);
+
+s=s/y;
+cout<<setprecision(8)<<s<<"\n";
+}
+
+	return 0; 
+} 
