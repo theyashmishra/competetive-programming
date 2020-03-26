@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long t,n,b,m,a,s;
+	cin>>t;
+	while(t--){s=0;
+	    cin>>n>>b>>m;
+	    while(n!=1){
+	        (n%2==0)?(a=n/2):(a=(n+1)/2);
+	        n=n-a;
+	        s=s+(m*a)+b;
+	        m=m*2;
+	    }
+	    s+=m;
+	    cout<<s<<" ";
+	}
+	return 0;
+}
