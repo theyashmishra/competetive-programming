@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int a,x,y;
+	cin>>a;
+	if(a%2==0&&a%6==0){
+	    cout<<"yes";
+	}
+	else if(a%2!=0&&a%3==0){
+	    cout<<"yes";}
+	    else if(a%2!=0&&(a+5)%6==0){
+	        cout<<"yes";
+	    }
+	else{
+	    cout<<"no";
+	}
+	return 0;
+}
