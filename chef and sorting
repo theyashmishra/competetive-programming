@@ -1,0 +1,28 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+	long long int t,n,x,y,i,j;
+	cin>>t;
+	while(t--){y=0;
+	    cin>>n;
+	    long long int a[n];
+	    for(i=0;i<n;i++){
+	        cin>>a[i];
+	    }
+	    for(i=0;i<n-1;i++){
+	        if(a[i]>a[i+1]){
+	            x=a[i];
+	            for(j=i;j<n-1;j++){
+	                a[j]=a[j+1];
+	            }
+	            a[n-1]=x;
+	            i=-1;
+	          y++; 
+	        } 
+	    }
+	    cout<<y<<"\n";
+	}
+	return 0;
+}
