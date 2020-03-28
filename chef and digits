@@ -10,11 +10,22 @@ int main() {
 	    b=A%10;
 	    c=B/10;
 	    d=B%10;
-	    
 	    e=A+B;
+	    if(a==0&&c==0){
+	        cout<<e<<"\n";
+	    }
+	    else if(a==0){i=(b*10+c+d);
+	        (b>c)?cout<<i<<"\n":cout<<e<<"\n";
+	    }
+	    else if(c==0){
+	        i=d*10+a+b;
+	        (a>d)?cout<<e<<"\n":cout<<i<<"\n";
+	    }
+	    else{
 	    f=(a*10+c)+(b*10+d);
 	    g=(a*10+d)+(c*10+b);
 	    h=(d*10+b)+(c*10+a);
+	 
 	    if(e>=f&&e>=g&&e>=h){
 	        cout<<e<<"\n";
 	    }
@@ -26,6 +37,7 @@ int main() {
 	    }
 	    else if(h>=e&&h>=f&&h>=g){
 	        cout<<h<<"\n";
+	    }
 	    }
 	  
 	}
