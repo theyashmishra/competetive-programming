@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int A,B,a,b,c,d,e,f,g,h,i,t;
+	cin>>t;
+	while(t--){
+	    cin>>A>>B;
+	    a=A/10;
+	    b=A%10;
+	    c=B/10;
+	    d=B%10;
+	    
+	    e=A+B;
+	    f=(a*10+c)+(b*10+d);
+	    g=(a*10+d)+(c*10+b);
+	    h=(d*10+b)+(c*10+a);
+	    if(e>=f&&e>=g&&e>=h){
+	        cout<<e<<"\n";
+	    }
+	    else if(f>=e&&f>=g&&f>=h){
+	        cout<<f<<"\n";
+	    }
+	    else if(g>=e&&g>=f&&g>=h){
+	        cout<<g<<"\n";
+	    }
+	    else if(h>=e&&h>=f&&h>=g){
+	        cout<<h<<"\n";
+	    }
+	  
+	}
+	return 0;
+}
