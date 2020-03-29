@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int t,n,a,b,c,d,e,f,g,h,i;
+cin>>t;
+while(t--){d=f=h=0;
+e=g=i=4;
+    cin>>n;
+    while(n--){
+        cin>>a>>b>>c;
+        if(b==1){
+            if(c>d){
+                d=c;
+                e=a;
+            }
+            else if(c==d&&a<e){
+                e=a;
+            }
+    }
+    else if(b==2){
+        if(c>f){
+            f=c;
+            g=a;
+        }
+        else if(c==f&&a<g){
+            g=a;}
+    }
+    else if(b==3){
+        if(c>h){
+            h=c;
+            i=a;
+        }
+        else if(c==h&&a<i){
+            i=a;
+        }
+    }
+}
+cout<<d<<" "<<e<<"\n";
+cout<<f<<" "<<g<<"\n";
+cout<<h<<" "<<i<<"\n";
+}
+	return 0;
+}
