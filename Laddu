@@ -1,0 +1,42 @@
+#include <iostream>
+#include<string.h>
+using namespace std;
+
+int main() {
+int t,a,b,c,d,n;
+cin>>t;
+char s[100],s1[100];
+while(t--){d=0;
+    cin>>n;
+    cin>>s1;
+    while(n--){
+        cin>>s;
+        if(strcmp(s,"CONTEST_WON")==0){
+            cin>>a;
+            if(a<=20){
+            d=d+300+20-a;}
+            else{
+                d+=300;
+            }
+        }
+        else if(strcmp(s,"TOP_CONTRIBUTOR")==0){
+            d+=300;
+        }
+        else if(strcmp(s,"BUG_FOUND")==0){
+            cin>>a;
+            d+=a;
+        }
+        else if(strcmp(s,"CONTEST_HOSTED")==0)
+{
+    d+=50;
+}   
+}
+if(strcmp(s1,"INDIAN")==0){
+    cout<<d/200<<"\n";
+}
+else if(strcmp(s1,"NON_INDIAN")==0){
+     cout<<d/400<<"\n";
+}
+}
+	return 0;
+}
