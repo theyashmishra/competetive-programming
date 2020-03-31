@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t,a,b,c,d,e,f,g;
+	cin>>t;
+	while(t--){
+	    cin>>a>>b>>c>>d>>e>>f;
+	    if((a>b&&b>c&&d>e&&e>f)||(a>c&&c>b&&d>f&&f>e)||(b>a&&a>c&&e>d&&d>f)||(b>c&&c>a&&e>f&&f>d)||(c>a&&a>b&&f>d&&d>e)||(c>b&&b>a&&f>e&&e>d)){
+	        cout<<"FAIR\n";
+	    }
+ else if((a==b&&b>c&&d==e&&e>f)||(a==b&&b<c&&e==d&&e<f)||(b==c&&c>a&&e==f&&f>d)||(b==c&&c<a&&e==f&&f<d)||(c==a&&a>b&&f==d&&d>e)||(c==a&&a<b&&f==d&&d<e)){
+	        cout<<"FAIR\n";
+	    }
+	    else if(a==b&&b==c&&d==e&&e==f){
+	        cout<<"FAIR\n";
+	    }
+	    else{
+	        cout<<"NOT FAIR\n";
+	    }
+	}
+	
+	return 0;
+}
