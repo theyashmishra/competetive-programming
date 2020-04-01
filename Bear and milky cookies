@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(void) {
+int t,n,x,i,j;
+char s[30];
+cin>>t;
+while(t--){x=0;i=1;
+
+    cin>>n;
+    j=n;
+    while(n--){
+        cin>>s;
+        if(strcmp(s,"cookie")==0){
+            x++;
+        }
+         if(strcmp(s,"milk")==0){
+            x=0;
+        }
+        if(x>1&&i!=0){
+            i=0;
+        }
+    }
+    if(i==1&&x==0){
+        cout<<"YES\n";
+    }
+    
+    else{
+        cout<<"NO\n";
+    }
+}
+	return 0;
+}
+
