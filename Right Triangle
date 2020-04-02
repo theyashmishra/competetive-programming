@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long int t;
+	double h,b,s,l,a,x,c,d;
+	cin>>t;
+	while(t--){
+	    cin>>h>>s;
+	    a=(pow(h,4))-(16*pow(s,2));
+	    c=sqrt(a);
+	    if(a<0){
+	        cout<<"-1\n";
+	    }
+	    else{
+	        b=sqrt((pow(h,2)+c)/2);
+	        l=(2*s)/b;
+	        cout<<fixed<<setprecision(6)<<l<<" "<<fixed<<setprecision(6)<<b<<" "<<fixed<<setprecision(6)<<h<<"\n";
+	    }
+	}
+	
+	return 0;
+}
