@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int t,a,b,i,x;
+	cin>>t;
+	while(t--){
+	    cin>>a;
+	    b=0;
+	    if(a<5){
+	        cout<<b<<"\n";
+	    }
+	    else{
+	    for(i=5;i<=a;i*=5){
+	        x=a/i;
+	        b+=x;
+	    }
+	    cout<<b<<"\n";
+	}
+	}
+	return 0;
+}
