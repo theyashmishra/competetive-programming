@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int t,n,q,i,j,x,y;
+	cin>>t;
+	while(t--){
+	    cin>>n>>q;
+	    x=n*n;
+	    long long int a[n],b[x],c[n],l=0;
+	    for(i=0;i<n;i++){
+	        cin>>a[i];
+	    }
+	     for(i=0;i<n;i++){
+	        cin>>c[i];
+	    }
+	     for(i=0;i<n;i++){
+	        for(j=0;j<n;j++){
+	            b[l]=a[i]+c[j];
+	            l++;
+	        }
+	    }
+	    sort(b,b+x);
+	    while(q--){
+	        cin>>y;
+	        cout<<b[y-1]<<"\n";
+	    }
+	}
+	return 0;
+}
