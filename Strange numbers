@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	double t,x,k,i,j;
+	cin>>t;
+	while(t--){
+	    cin>>x>>k;
+	     i=pow(2,k);
+	  
+	    if(k>=x){
+	        cout<<"0\n";
+	    }
+	  
+	   else if(x>=i){
+	        cout<<"1\n";
+	    }
+	    else{
+	        cout<<"0\n";	    }
+	}
+	return 0;
+}
