@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long int t,i,j,x,n;
+	cin>>t;
+	while(t--){j=0;
+	    cin>>n;
+	    long int a[n],b[n],c[n];
+	    for(i=0;i<n;i++){
+	        cin>>a[i];
+	        a[i]+=1;
+	        cin>>b[i]>>c[i];
+	    }
+	    for(i=0;i<n;i++){
+	        x=b[i]/a[i];
+	        x*=c[i];
+	        if(x>j){
+	            j=x;
+	        }
+	    }
+	    cout<<j<<"\n";
+	}
+	return 0;
+}
