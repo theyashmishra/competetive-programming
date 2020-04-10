@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t,k,n,x,y,z;
+	cin>>t;
+	while(t--){y=z=0;
+	    cin>>n>>k;
+	    int a[n];
+	    for(int i=0;i<n;i++){
+	        cin>>a[i];
+	    }
+	     for(int i=0;i<n;i++){
+	     x=a[i]-y;
+	     if(x>k){
+	         (x%k==0)?(z+=(x-1)/k):(z+=(x/k));
+	     }
+	     y=a[i];
+	    }
+	    cout<<z<<"\n";
+	}
+	return 0;
+}
