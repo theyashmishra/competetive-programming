@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long int t,n,i,x,y;
+	cin>>t;
+	while(t--){y=i=0;
+	    cin>>n;
+	    while(n--){
+	        cin>>x;
+	        if(x==1){
+	            y++;
+	        }
+	        else if(x==0&&y>0){
+	            y--;
+	        }
+	        else if(x==0&&y==0){
+	           
+	            i=1;
+	          
+	        }
+	    }
+	    if(i==0){
+	        cout<<"Valid\n";
+	    }
+	    else {
+	        cout<<"Invalid\n";
+	    }
+	}
+	return 0;
+}
