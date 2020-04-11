@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int k,t,n,w,r,x,y,z;
+	cin>>t;
+	while(t--){w=x=y=0;r=INT_MAX;
+	    cin>>n>>k;
+	    long long int a[n],b[n],c[n];
+	    for(long long int i=0;i<n;i++)
+	    {
+	        cin>>a[i];
+	        b[i]=a[i]%k;
+	        c[i]=k-b[i];
+	        w+=c[i];
+	    }
+	    z=w;
+	    for(long long int i=0;i<n;i++){
+	        x+=b[i];
+	        w-=c[i];
+	        y=x-w;
+	        if(y<r&&y>=0){
+	          r=y;  
+	        }
+	    }
+	    if(z<r){
+	        r=z;
+	    }
+	    cout<<r<<"\n";
+	}
+	return 0;
+}
