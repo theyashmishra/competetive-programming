@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int t,n,i,j,x,y,z,f;
+cin>>t;
+while(t--){x=1;f=0;
+    cin>>n;
+    if(n<=3){
+        y=1;
+        j=n;
+    }
+    else{y=1;
+        z=n-3;
+        (z%2==0)?(z=z/2):(z=(z+1)/2);
+        y+=z;
+        j=3;
+    }
+    cout<<y<<"\n";
+  while(y--){
+      cout<<j<<" ";
+      while(x<=n&&j--){
+          cout<<x<<" ";
+          x++;
+          
+  }
+  cout<<"\n";
+  ((x+1)<=n)?(j=2):(j=1);
+    
+}}
+	return 0;
+}
