@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long int t,n,i,x,k;
+float j,y;
+cin>>t;
+while(t--){i=j=0;
+  n=1000;
+  k=1;
+  y=0;
+  while(n--){
+      cin>>x;
+      if(x==-1){
+          break;
+      }
+      if(x>30){
+          i++;
+      }
+      if(x%2==0){
+          y+=(x*k);
+          j+=k;
+      }
+      k++;
+  }
+  y=y/j;
+  cout<<i<<" "<<fixed<<setprecision(2)<<y<<"\n";
+}
+	return 0;
+}
