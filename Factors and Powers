@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long int powe(long long int x,long long int k){
+   
+if(k==1){
+    return x;
+}
+else {
+    if(k%2==0){
+        long long int i=pow(powe(x,k/2),2);
+         if(i>=1000000007){ return i%1000000007;}
+         else{return i;}
+    }
+    else{
+        long long int j=(x*pow(powe(x,(k-1)/2),2));
+         if(j>=1000000007){ return j%1000000007;}
+         else{return j;}
+    }
+}
+    
+}
+int main() {
+	long long int t,x,k,i,j,z;
+	cin>>t;
+	while(t--){z=0;j=0;
+	    cin>>x>>k;
+	    for(i=2;i<=x;i++){
+	        if(x%i==0){
+	            z+=powe(i,k);
+	        }
+	    }
+	    for(i=2;i<=k;i++){
+	        if(k%i==0){
+	            j+=(i*x);
+	        }
+	    }
+	    cout<<z<<" "<<j<<"\n";
+	}
+	return 0;
+}
