@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	long long int n,k,i,j,x,y,t,z,a,b;
+	cin>>t;
+	while(t--){
+	 cin>>k>>x>>y;
+	z=x+y;
+ if(z%5==0){
+     cout<<"NO\n";
+ }else{
+	 k-=3;
+	 i=k%4;
+	 for(j=0;j<=i;j++){
+	     a=(x+y)*(pow(2,j));
+	     a%=10;
+	     z+=a;
+	 }
+	 k=k/4;
+	 b=k*20;
+	 b+=z;
+	 (b%3==0)?cout<<"YES\n":cout<<"NO\n";
+ }
+	}
+	return 0;
+}
