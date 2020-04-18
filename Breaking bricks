@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t,s,x,y,z,a;
+	cin>>t;
+	while(t--){
+	    cin>>s>>x>>y>>z;
+	    if((x+y+z)<=s){
+	        cout<<"1\n";
+	    }
+	    else if((x+y)<=s||(y+z)<=s){
+	        cout<<"2\n";
+	    }
+	    else{
+	        cout<<"3\n";
+	    }
+	}
+	return 0;
+}
