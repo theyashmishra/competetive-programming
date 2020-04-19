@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int t,n,i,j,a,b,x,y,z;
+	cin>>t;
+	while(t--){
+	    cin>>n>>a>>b;
+	   long long int w[n],c[n],s=0,p=0;
+	    for(i=0;i<n;i++){
+	        cin>>w[i]>>c[i];
+	    }
+	    for(i=a;i<=b;i++){
+	        x=i;
+	        for(j=0;j<n;j++){
+	            y=(w[j]*x)+c[j];
+	            x=y;
+	            
+	        }
+	        (x%2==0)?(p++):(s++);
+	    }
+	    cout<<p<<" "<<s<<"\n";
+	}
+	return 0;
+}
