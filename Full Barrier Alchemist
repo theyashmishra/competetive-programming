@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int t,n,y1,y2,l,h,ty,a,b,i;
+	cin>>t;
+	while(t--){a=0;b=0;
+	    cin>>n>>h>>y1>>y2>>l;
+	    while(n--){
+	        cin>>ty>>i;
+	        if(ty==1&&(h-y1)<=i&&l>0){
+	            a++;
+	        }
+	        else if(ty==2&&(y2)>=i&&l>0){
+	            a++;
+	        }
+	        else{
+	            l--;
+	            if(l>0){
+	                a++;
+	            }
+	        }
+	    }
+	    cout<<a<<"\n";
+	}
+	return 0;
+}
