@@ -1,0 +1,35 @@
+#include<iostream>
+#include<math.h>
+int main(){
+    long long int t,h,x,y,z;
+   std:: cin>>t;
+    while(t--){long long int i=0,j=0,k=0;
+   std::cin>>x;z=0;
+    long long int a[x];
+
+for(i=0;i<x;i++){
+    std::cin>>a[i];
+ }
+for(i=0;i<x;i++){
+  /*  if(i==0){
+        j+=a[i];
+        (a[i]<0)?(k=1):(k=0);
+    }
+    else if(a[i]<0&&k==0){
+        j+=a[i];
+        k=1;
+    }
+    else if(a[i]>0&&k==1){
+        j+=a[i];
+        k=0;
+    }
+}*/
+if((a[i]>0&&a[i+1]<0)||(a[i]<0&&a[i+1]>0)){
+    j+=a[i];
+    j+=a[i+1];
+    i++;
+}}
+std::cout<<j<<"\n";
+    }
+    return 0;
+}
