@@ -1,0 +1,18 @@
+#include<iostream>
+#include<math.h>
+int main(){
+    long long int t,h,x,y,z;
+   std:: cin>>t;
+    while(t--){int i=0,j=0;
+   std::cin>>x;
+   for(i=0;i<x;i++){
+       j=j+pow(2,i);
+       if(x%j==0&&j!=1){
+           y=x/j;
+           break;
+       }
+   }
+   std::cout<<y<<"\n";
+    }
+    return 0;
+}
