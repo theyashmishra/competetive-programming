@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t,n,i,x,y,q,z,j;
+	cin>>t;
+	int a[31];
+
+	while(t--){
+	    	for(i=0;i<31;i++){
+	    a[i]=0;
+	}
+	    cin>>n;
+	    while(n--){
+	        cin>>x>>y;
+	        a[x-1]+=y;
+	    }
+	    cin>>q;
+	    while(q--){z=0;
+	        cin>>x>>y;
+	        for(i=0;i<x;i++){
+	            z+=a[i];
+	        }
+	        (z>=y)?cout<<"Go Camp\n":cout<<"Go Sleep\n";
+	    }
+	    
+	}
+	return 0;
+}
