@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int t,i,x,y,z,j,k,l;
+	cin>>t;
+	while(t--){j=k=0;
+	    cin>>x;
+	    for(i=1;i<INT_MAX;i++){
+	        y=pow(2,i);
+	        if(y==x){
+	            j=1;
+	            cout<<"0\n";
+	            break;
+	        }
+	        if(y>x){
+	            j=2;
+	            z=i;
+	            break;
+	        }
+	    }
+	    if(j!=1){
+	    for(i=z-1;i>=0;i--){
+	        y=pow(2,i);
+	        if((x-y)>=0){
+	            x-=y;
+	           
+	                k++;
+	            
+	        }
+	    }k--;
+	    cout<<k<<"\n";}
+	}
+	return 0;
+}
