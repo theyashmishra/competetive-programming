@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int t,n,x,y,z;
+	cin>>t;
+	while(t--){int f=0;
+	    cin>>n;
+	    x=8;
+	    for(int i=3;i<=n;i++){
+	       if(i==3){
+	           y=i;
+	       }
+	        if(y==n){
+	            f=1;
+	            break;
+	        }
+	        else if(y>n){
+	            break;
+	        }
+	        y=(y*2)+x;
+	        x*=2;
+	    }
+	    if(f==1){
+	        cout<<"YES\n";
+	    }
+	    else{
+	        cout<<"NO\n";
+	    }
+	}
+	return 0;
+}
