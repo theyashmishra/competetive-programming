@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  long  long int t,n,x,y,z;
+    cin>>t;
+    while(t--){x=y=0;
+        string s1,s2,s3;
+        cin>>n;
+        cin>>s1;
+        n--;
+        x++;
+        while(n--){
+            cin>>s2;
+            if(s1==s2){
+                x++;
+                
+            }
+            else{
+                y++;
+                s3=s2;
+            }
+        }
+        if(x==y){
+            cout<<"Draw\n";
+        }
+        else if(x>y){
+           cout<<s1<<"\n";
+        }
+        else{
+            cout<<s3<<"\n";
+        }
+    }
+	return 0;
+}
