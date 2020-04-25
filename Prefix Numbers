@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+int nb(int x){
+    int z=0;
+    while(x){
+        z++;
+        x/=10;
+    }
+    return z;
+}
+int main() {
+long long int t,n,i,x,y,z,m,k;
+cin>>t;
+while(t--){m=0;
+    cin>>x>>y;
+    for(i=0;i<1000000000000;i++){
+        if(i<10){
+            z=(x*10)+i;
+        }
+        else{
+            n=nb(i);
+            z=i+(x*pow(10,n));
+        }
+        if(z%y==0){
+            m=1;
+            cout<<z<<"\n";
+            break;
+        }
+        if(z>1000000000000000000){
+            break;
+        }
+    }
+    if(m==0){
+        cout<<"-1\n";
+    }
+}
+	return 0;
+}
