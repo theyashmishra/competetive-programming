@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int t,n,i,j,k,l;
+	
+	cin>>t;
+	while(t--){j=1;k=0;l=-1;
+	    cin>>n;
+	    while(1){
+	        for(i=0;i<=j;i++){
+	            k++;
+	            if(k==n){
+	                l=i;
+	            }
+	        }
+	        j++;
+	        if(l!=-1){
+	            cout<<l<<"\n";
+	            break;}
+	    }
+	}
+	return 0;
+}
