@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+bool isp(long double x) 
+{   
+  // Find floating point value of  
+  // square root of x. 
+  long double sr = sqrt(x); 
+  
+  // If square root is an integer 
+  return ((sr - floor(sr)) == 0); 
+} 
+int main() {
+	long double x,y,z,t,i,n;
+	cin>>t;
+	while(t--){
+	    z=0;
+	    cin>>n;
+	    for(i=1;i<=(n*n);i++){
+	        x=i*i;
+	        y=n+x;
+	        if(isp(y)){
+	            cout<<x<<endl;
+	            z=1;
+	            break;
+	        }
+	    }
+	    if(z==0){
+	        cout<<"-1\n";
+	    }
+	}
+	return 0;
+}
