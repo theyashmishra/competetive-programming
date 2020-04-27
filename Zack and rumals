@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int t,l,b,x,y,i;
+	cin>>t;
+	while(t--){
+	    cin>>l>>b;
+	    while(1){
+	        if(l==b){
+	            cout<<b<<endl;
+	            break;
+	        }
+	        else if(l==1||b==1){
+	            (l<=b)?cout<<l<<endl:cout<<b<<endl;
+	            break;
+	        }
+	        else{
+	            (l<b)?(b-=l):(l-=b);
+	        }
+	    }
+	}
+	return 0;
+}
