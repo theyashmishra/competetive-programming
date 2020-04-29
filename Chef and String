@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,i,j,x,n;
+char s[1000000],s1[1000000],s2[1000000];
+cin>>t;
+while(t--){
+    cin>>s;
+    n=strlen(s);
+    for(i=0;i<n;i++){
+        if(i==0){
+            s1[i]=s[n-1];
+        }
+        else{
+            s1[i]=s[i-1];
+        }
+    }
+     for(i=0;i<n;i++){
+        if(i==n-1){
+            s2[i]=s[0];
+        }
+        else{
+            s2[i]=s[i+1];
+        }
+    }
+    if(strcmp(s1,s2)==0){
+        cout<<"YES\n";
+    }
+    else{
+        cout<<"NO\n";
+    }
+}
+	return 0;
+}
