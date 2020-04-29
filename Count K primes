@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long int np(long long int n){
+    long long int x=0,i,j,y;
+    while(n%2==0){
+        if(x==0){
+            x++;
+        }
+        n/=2;
+    }
+    for(i=3;i<=sqrt(n);i++){
+        j=0;
+        while(n%i==0){
+            if(j==0){
+                x++;
+                j=1;
+            }
+            n/=i;
+        }
+        j=0;
+    }
+    if(n>2){
+        x++;
+    }
+    return x;
+    
+}
+
+int main() {
+long long int t,a,b,k,i,j,x,y;
+cin>>t;
+while(t--){j=0;
+    cin>>a>>b>>k;
+    for(i=a;i<=b;i++){
+        x=np(i);
+        if(x==k){
+            j++;
+        }
+    }
+    cout<<j<<"\n";
+}
+	return 0;
+}
