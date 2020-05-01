@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,i,j,x,k,l;
+char s[100];
+cin>>t;
+while(t--){k=0;
+    cin>>s;
+    x=strlen(s);
+    for(i=0;i<x-1;i++){
+        for(j=i+1;j<x;j++){
+            if(s[i]==s[j]){
+                k++;
+            }
+        }
+        if(k!=0){
+            cout<<"yes\n";
+            break;
+            
+        }
+    }
+    if(k==0){
+        cout<<"no\n";
+    }
+}
+	return 0;
+}
