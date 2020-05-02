@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+stack<char>s;
+long long int t,n,i,j,x,y;
+cin>>t;
+while(t--){x=0;y=0;
+    char st[1000000];
+    cin>>st;
+    for(i=0;i<strlen(st);i++){
+        if(st[i]=='<'){
+            s.push(st[i]);
+        }
+        else if(st[i]=='>'){
+            if(!s.empty()){
+                s.pop();
+                x+=2;
+            }
+            else if(s.empty()){
+                y=1;
+            }
+            if(y==1){
+                 
+                break;
+            }
+        }
+        if(y==1){
+                break;
+            }
+    }
+   cout<<x<<endl;
+}
+	return 0;
+}
