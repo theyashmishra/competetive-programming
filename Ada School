@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int t,n,m,x,y;
+	cin>>t;
+	while(t--){
+	    cin>>n>>m;
+	    x=n*m;
+	    (x%2==0)?cout<<"YES"<<endl:cout<<"NO"<<endl;
+	}
+	return 0;
+}
