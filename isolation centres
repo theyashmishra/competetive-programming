@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,n,x,y,z,q,k,i,b;
+char str[1000000];
+cin>>t;
+while(t--){x=0;y=k=0;
+    cin>>n>>q;
+    cin>>str;
+int c,a[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        sort(str,str+n);
+        
+        z=str[0];
+        x++;
+        for(i=1;i<=n;i++){
+            if(z==str[i]){
+                x++;
+            }
+            else{
+                a[k]=x;
+                k++;
+                x=1;
+                z=str[i];
+                 
+            }
+           
+        }
+        while(q--){y=0;
+            cin>>c;
+            for(i=0;i<k;i++){
+                if((a[i]-c)>=0){
+                    y=y+(a[i]-c);
+                    
+                }
+              
+            }
+            cout<<y<<endl;
+        }
+        
+    
+}
+	return 0;
+}
