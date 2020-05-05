@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0); cin.tie(0);cout.tie(0);
+	long long int t,i,j,n,x,y;
+	cin>>t;
+	while(t--){x=0;
+	y=0;
+		    cin>>n;
+		    for(i=1;i<n;i++){
+		      j=i*i;
+		       if(j>n){
+		            break;
+		        }
+		        y=n-j;
+		        if(y>700){
+		            x+=700;
+		        }
+		        else{
+		            x+=y;
+		        }
+		      
+		        
+		    }
+	    cout<<x<<endl;
+	}
+	return 0;
+}
