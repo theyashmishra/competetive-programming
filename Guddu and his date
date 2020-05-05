@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,n,i,j,x,y,z;
+cin>>t;
+while(t--){j=0;z=1;y=0;
+    cin>>n;
+    if(n<10){
+        cout<<n<<endl;
+    }
+    else{
+    int a[7];
+    while(n>0){
+        a[j]=n%10;
+        n/=10;
+        j++;
+    }
+    for(i=0;i<j-1;i++){
+        for(x=i+1;x<j;x++){
+            y=abs(a[i]-a[x]);
+            
+            z*=y;
+           
+        }
+    }
+    cout<<z%1000000007<<endl;}
+}
+
+	return 0;
+}
