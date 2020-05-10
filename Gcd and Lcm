@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+long long int gcd(long long int a,long long int b){
+    if(a==0){
+       return b; 
+    }
+    else{
+        return gcd(b%a,a);
+    }
+}
+long long int lcm(long long int a,long long int b){
+    long long int y=gcd(a,b);
+    long long int x=(a*b)/y;
+    return x;
+}
+int main() {
+long long int t,a,b,c,d;
+cin>>t;
+while(t--){
+    cin>>a>>b;
+    c=(b>a)?gcd(b,a):gcd(a,b);
+    d=(b>a)?lcm(b,a):lcm(a,b);
+    cout<<c<<" "<<d<<endl;
+}
+	return 0;
+}
