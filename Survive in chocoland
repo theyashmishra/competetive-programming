@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int gcd(int a, int b){ 
+    if (a == 0) 
+        return b;  
+    return gcd(b % a, a);  
+ } 
+  
+   
+// Function to return LCM of two numbers  
+  int lcm(int a, int b)  
+ {  
+    return (a*b)/gcd(a, b);  
+ }  
+int main() {
+long long int t,n,k,s,x,y,z,j;
+cin>>t;
+while(t--){z=0;
+j=1;
+    cin>>n>>k>>s;
+    x=n/k;
+    for(int i=1;i<s;i++){
+        y=x*i;
+     
+       if(y<s){
+           y+=1;
+           if(y%7==0){
+               z=1;
+           }
+           else{
+               j++;
+           }
+       }
+       if(z==1){
+           break;
+       }
+    }
+    (z==1)?cout<<"-1\n":cout<<j<<"\n";
+}
+	return 0;
+}
