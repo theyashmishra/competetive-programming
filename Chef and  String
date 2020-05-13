@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string st;
+	cin>>st;
+	int cc=0,ch=0,ce=0,cf=0;
+	for(int i=0;i<st.length();i++){
+	    if(st[i]=='C')
+	        cc++;
+	    else if(st[i]=='H' && ch<cc)
+	        ch++;
+	    else if(st[i]=='E' && ce<ch)
+	        ce++;
+	    else if(st[i]=='F' && cf<ce)
+	        cf++;
+	}
+	cout<<cf;
+}
