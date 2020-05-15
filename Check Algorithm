@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+char s[1000],s2;
+long long int t,i,j,x,y;
+cin>>t;
+while(t--){
+    string s1;
+    cin>>s;
+    s2=s[0];
+    x=1;
+    for(i=1;s[i]!='\0';i++){
+        if(s2==s[i]){
+            x++;
+        }
+        else if(s2!=s[i]){
+            s1+=s2;
+            s1+=to_string(x);
+            s2=s[i];
+            x=1;
+        }
+    }
+    s1+=s2;
+     s1+=to_string(x);
+            s2=s[i];
+            x=1;
+    
+    if(s1.length()<strlen(s)){
+        cout<<"YES"<<endl;
+    }
+    else{
+        cout<<"NO"<<endl;
+    }
+}
+	return 0;
+}
