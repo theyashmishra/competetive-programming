@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,i,j,x,y,z,n,k;
+char s[5],p[5];
+cin>>t;
+while(t--){x=y=z=k=0;
+cin>>n;
+    for(i=0;i<n;i++){
+        k=0;
+        cin>>s>>j;
+        
+        if(i==0){
+            (j==1)?y++:x++;
+        }
+        else if(strcmp(s,p)==0){
+            (j==1)?y++:x++;
+        }
+        else if(strcmp(s,p)!=0){
+            (y>x)?z+=y:z+=x;
+           
+            x=0;y=0;
+             (j==1)?y++:x++;
+             k=1;
+             if(i==n-1){
+                 z++;
+             }
+            
+        }
+        strcpy(p,s);
+       
+    }
+    if(k==0){
+         (y>x)?z+=y:z+=x;
+    }
+    cout<<z<<endl;
+}
+	return 0;
+}
