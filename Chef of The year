@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int n,m,i=0,j=0,x,y;
+	map<string,string> s;
+	map<string,int>ch;
+	map<string,int>co;
+	string s1,s2;
+	cin>>n>>m;
+	while(n--){i=0;
+	    cin>>s1>>s2;
+	    s.insert(pair<string,string>(s1,s2));
+	    ch.insert(pair<string,int>(s1,i));
+	    co.insert(pair<string,int>(s2,i));
+	}
+	while(m--){
+	    cin>>s1;
+	    auto itr=ch.find(s1);
+	    itr->second+=1;
+	    auto itr1=s.find(s1);
+	    auto itr2=co.find(itr1->second);
+	    itr2->second+=1;
+	}
+	for(auto itr=co.begin();itr!=co.end();++itr){
+	    if(itr->second>j){
+	        s1=(itr->first);
+	        j=itr->second;
+	    }
+	    }j=0;
+	    	for(auto itr=ch.begin();itr!=ch.end();++itr){
+	    if(itr->second>j){
+	        s2=(itr->first);
+	        j=itr->second;
+	    }}
+	    cout<<s1<<endl<<s2<<endl;
+	
+	return 0;
+}
