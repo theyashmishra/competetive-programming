@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int t,i,j,x,y,z,a,b;
+cin>>t;
+while(t--){z=0;
+    cin>>a>>b;
+    x=a+b;
+    while(x>0){
+        j=x%10;
+       
+        switch(j){
+            case 0:z+=6;
+            break;
+            case 1:z+=2;
+            break;
+             case 2:z+=5;
+            break;
+             case 3:z+=5;
+            break;
+             case 4:z+=4;
+            break;
+             case 5:z+=5;
+            break;
+             case 6:z+=6;
+            break;
+             case 7:z+=3;
+            break;
+             case 8:z+=7;
+            break;
+             case 9:z+=6;
+            break;
+        }
+        x/=10;
+    }
+    cout<<z<<endl;
+}
+	return 0;
+}
