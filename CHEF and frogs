@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int n,p,k,i,j,x,y,z,c,d,e;
+	cin>>n>>k>>p;
+	long long int a[n],b[n];
+	for(i=0;i<n;i++){
+	    cin>>a[i];
+	    b[i]=a[i];
+	}
+	sort(b,b+n);
+	while(p--){z=d=0;
+	    cin>>x>>y;
+	    if(a[x-1]>a[y-1]){
+	        swap(a[x-1],a[y-1]);
+	    }
+	    for(i=0;i<n;i++){
+	        if(b[i]==a[x-1]){
+	            c=b[i];
+	            d=1;
+	        }
+	        if(d==1&&b[i]<=a[y-1]){
+	            if((b[i]-c)>k){
+	                z=1;
+	            }
+	            c=b[i];
+	        }
+	        if(z==1){
+	            break;
+	        }
+	    }
+	   
+	   (z==0)?cout<<"YES\n":cout<<"NO\n";
+	    }
+	
+	
+	return 0;
+}
