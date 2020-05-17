@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,i,j,x,y,z;
+cin>>t;
+while(t--){x=y=0;
+    char s1[10000],s2[10000];
+    cin>>s1>>s2;
+    vector<char>v;
+    for(i=0;s1[i]!='\0';i++){
+        v.push_back(s1[i]);
+        }
+        for(j=0;s2[j]!='\0';j++){
+            auto it=find(v.begin(),v.end(),s2[j]);
+            if(it!=v.end()){
+                 
+                x++;
+                v.erase(it);
+            }
+           
+        }
+    
+    cout<<x<<endl;
+}
+	return 0;
+}
+///////////////////////////////////////
+Second solution
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int t,i,j,x,y,z;
+cin>>t;
+while(t--){x=y=0;
+    char s1[10000],s2[10000];
+    cin>>s1>>s2;
+    for(i=0;s1[i]!='\0';i++){
+        for(j=0;s2[j]!='\0';j++){
+            if(s1[i]==s2[j]){
+               
+                x++;
+                s2[j]='$';
+                break;
+            }
+        }
+    }
+    cout<<x<<endl;
+}
+	return 0;
+}
