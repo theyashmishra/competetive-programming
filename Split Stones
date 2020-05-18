@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+long long int t,a,b,c,x,y,z,d,e;
+cin>>t;
+while(t--){z=0;
+    cin>>a>>b>>c>>x>>y;
+    if((x-a)>=0&&(y-b)>=0&&(x+y-a-b)==c){
+        z=1;
+    }
+    else  if((x-b)>=0&&(y-a)>=0&&(x+y-a-b)==c){
+        z=1;
+    }
+     else  if((x-b)>=0&&(y-c)>=0&&(x+y-b-c)==a){
+        z=1;
+    }
+       else  if((x-c)>=0&&(y-b)>=0&&(x+y-b-c)==a){
+        z=1;
+    }
+       else  if((x-a)>=0&&(y-c)>=0&&(x+y-a-c)==b){
+        z=1;
+    }
+     else  if((x-c)>=0&&(y-a)>=0&&(x+y-a-c)==b){
+        z=1;
+    }
+    (z==1)?cout<<"YES\n":cout<<"NO\n";
+}
+	return 0;
+}
