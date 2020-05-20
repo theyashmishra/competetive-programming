@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,sum,i,j,k,x;
+cin>>t;
+while(t--){sum=0;
+  string s;
+  cin>>s;
+  for(i=0;i<s.length();i++){
+     sum+=(s[i]-'0');
+  }
+   if(sum<5)
+        {
+            if(s.length()==1)              //4
+            cout<<sum<<'\n';
+            else                //121
+            cout<<(9-(sum%9))<<'\n';
+        }
+        else
+        {
+            if(sum%9<5)
+            cout<<(sum%9)<<'\n';//1344
+            else
+            cout<<(9-sum%9)<<'\n';
+        }
+}
+	return 0;
+}
