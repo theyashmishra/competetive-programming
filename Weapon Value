@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+long long int btd(long long int n) 
+{ 
+    long long int num = n; 
+   long long  int dec_value = 0; 
+  
+    // Initializing base value to 1, i.e 2^0 
+    long long int base = 1; 
+  
+   long long  int temp = num; 
+    while (temp) { 
+        long long int last_digit = temp % 10; 
+        temp = temp / 10; 
+  
+        dec_value += last_digit * base; 
+  
+        base = base * 2; 
+    } 
+  
+    return dec_value; 
+} 
+int main() {
+long long int t,i,j,x,y,z,n;
+string s1,s2;
+cin>>t;
+while(t--){i=0;
+    cin>>n;
+    while(i<n){
+        cin>>s1;
+        if(i==0){
+            x=stoi(s1);
+            x=btd(x);
+        }
+        else{
+            y=stoi(s1);
+            y=btd(y);
+            x=x^y;
+        }
+        i++;
+    }
+ unsigned long long int count = 0; 
+        while (x) { 
+            x &= (x - 1); 
+            count++; 
+        } 
+        cout<<count<<endl;
+}
+	return 0;
+}
