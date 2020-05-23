@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,n,k,a,b,c;
+cin>>t;
+while(t--){
+    cin>>a>>b>>k;
+    c=abs(a-b);
+    (k>c)?cout<<"0\n":cout<<c-k<<"\n";
+}
+	return 0;
+}
