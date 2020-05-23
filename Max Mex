@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,n,k,i,j,x,y;
+cin>>t;
+while(t--){y=0;
+    set<long long int>s;
+    cin>>n>>k;
+    for(i=0;i<n;i++){
+        cin>>x;
+        s.insert(x);
+    }
+    for(i=0;i<100000;i++){
+        auto it=s.find(i);
+          if(y==k){
+            x=1;
+            break;
+          }
+        if(it==s.end()){
+            y++;
+            s.insert(i);
+        }
+    }
+    k=0;
+    for(auto it=s.begin();it!=s.end();++it){
+        if(*it!=k){
+        break;
+        }
+        k++;
+    }
+      cout<<k<<endl;
+}
+	return 0;
+}
