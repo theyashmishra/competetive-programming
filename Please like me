@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int i,t,k,x,y,l,d,s,c,n;
+cin>>t;
+
+while(t--){
+    cin>>l>>d>>s>>c;
+    n=pow(c+1,d);
+     n*=s;
+    n-=1;
+    n/=c;
+    if(n>=l){
+        cout<<"ALIVE AND KICKING\n";
+    }
+    else{
+        cout<<"DEAD AND ROTTING\n";
+    }
+    
+}
+	return 0;
+}
