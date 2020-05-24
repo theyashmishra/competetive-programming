@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int t,i,j,k,x,y,z;
+	cin>>t;
+	while(t--){k=z=0;
+	    char s1[2500],s2[2500];
+	    cin>>s1>>s2;
+	    x=strlen(s1);
+	    y=strlen(s2);
+	    if(x>y){z=1;
+	        for(i=0;i<y;i++){
+	            for(j=0;j<x;j++){
+	                if(s2[i]==s1[j]){
+	                    k++;
+	                    s1[j]='&';
+	                    break;
+	                }
+	            }
+	            
+	        }
+	            if(k==y){
+	                 cout<<"YES\n";
+	               
+	            }
+	        
+	    }
+	    else if(y>x){z=2;
+	         for(i=0;i<x;i++){
+	            for(j=0;j<y;j++){
+	                if(s1[i]==s2[j]){
+	                    k++;
+	                    s2[j]='&';
+	                    break;
+	                }
+	            }}
+	            if(k==x){
+	                 cout<<"YES\n";
+	               
+	            }
+	        
+	    }
+	    else{
+	        if(strcmp(s1,s2)==0){
+	            cout<<"YES\n";
+	        }
+	        else{
+	            cout<<"NO\n";
+	        }
+	    }
+	    if((k!=x&&z==2)||(k!=y&&k==1)){
+	         cout<<"NO\n";
+	    }
+	  
+	}
+	return 0;
+}
