@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,i,j,n,x,y,z;
+cin>>t;
+while(t--){x=0;
+    char a[40000];
+    vector<char>v1;
+    vector<char>v2;
+    for(i=0;i<2;i++){
+        cin>>a;
+        for(j=0;j<strlen(a);j++){
+            v1.push_back(a[j]);
+        }
+    }
+    cin>>n;
+     for(i=0;i<n;i++){
+        cin>>a;
+        for(j=0;j<strlen(a);j++){
+            v2.push_back(a[j]);
+        }
+    }
+   
+    for(auto it1=v2.begin();it1!=v2.end();it1++){
+        auto it2=find(v1.begin(),v1.end(),*it1);
+        if(it2!=v1.end()){
+            *it2='0';
+        }
+        else{
+            x=1;break;
+        }
+    }
+    if(x==1){
+        cout<<"NO\n";
+    }
+    else{
+        cout<<"YES\n";
+    }
+    
+}
+	return 0;
+}
