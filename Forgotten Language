@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,i,j,x,y,n;
+cin>>t;
+while(t--){j=0;
+    unordered_map<string,int>u;
+    string s1,s2;
+    cin>>n>>x;
+    while(n--){
+        cin>>s1;
+        u.insert(make_pair(s1,j));
+    }j++;
+    while(x--){
+        cin>>y;
+        while(y--){
+            cin>>s1;
+            if(u.find(s1)!=u.end()){
+                u[s1]=j;
+            }
+        }
+    }
+    for(auto it=u.begin();it!=u.end();it++){
+        if(it->second>0){
+            cout<<"YES "<<it->first<<" ";
+        }
+        else{
+            cout<<"NO "<<it->first<<" ";
+        }
+    }
+    cout<<"\n";
+}
+	return 0;
+}
