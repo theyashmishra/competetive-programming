@@ -6,10 +6,12 @@ long long int t,i,j,x,y,n;
 cin>>t;
 while(t--){j=0;
     unordered_map<string,int>u;
+    vector<string>v;
     string s1,s2;
     cin>>n>>x;
     while(n--){
         cin>>s1;
+        v.push_back(s1);
         u.insert(make_pair(s1,j));
     }j++;
     while(x--){
@@ -20,14 +22,19 @@ while(t--){j=0;
                 u[s1]=j;
             }
         }
-    }
+    }for(auto itr=v.begin();itr!=v.end();itr++){
+        s1=*itr;
     for(auto it=u.begin();it!=u.end();it++){
-        if(it->second>0){
-            cout<<"YES "<<it->first<<" ";
+       if(it->first==s1){
+            if(it->second>0){
+            cout<<"YES ";
         }
         else{
-            cout<<"NO "<<it->first<<" ";
+            cout<<"NO "
+            ;
         }
+       }
+    }
     }
     cout<<"\n";
 }
