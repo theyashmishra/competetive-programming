@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,i,j,n,x,y,z;
+cin>>t;
+while(t--){y=z=0;
+    cin>>n;
+    vector<long long int >v;
+    for(i=0;i<n;i++){
+        cin>>x;
+        v.push_back(x);
+    }
+    do{
+        auto it1=max_element(v.begin(),v.end());
+        auto it2=min_element(v.begin(),v.end());
+        n=*it1;
+        x=*it2;
+        z=(*it1-*it2);
+        y=y+z;
+        for(auto itr=v.begin();itr!=v.end();itr++){
+            if(itr!=it1){
+                *itr=*itr+z;
+            }
+        }
+    }while(n!=x);
+    cout<<y<<endl;
+}
+	return 0;
+}
