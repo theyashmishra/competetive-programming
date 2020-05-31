@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int t,i,j,p,x;
+cin>>t;
+while(t--){x=0;
+    long long int a[5];
+    for(i=0;i<5;i++){
+        cin>>a[i];
+    }
+    cin>>p;
+    for(i=0;i<5;i++){
+        j=a[i]*p;
+        x+=j;
+    }
+   
+    if(x<=120){
+        cout<<"No\n";
+    }
+    else{
+        cout<<"Yes\n";
+    }
+    
+}
+	return 0;
+}
