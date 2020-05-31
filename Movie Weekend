@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t,i,j,x,y,n;
+	cin>>t;
+	while(t--){j=INT_MIN;
+	    cin>>n;
+	    int a[n],b[n],c[n];
+	    for(i=0;i<n;i++){
+	        cin>>a[i];
+	    }
+	    for(i=0;i<n;i++){
+	        cin>>b[i];
+	        c[i]=b[i]*a[i];
+	    }
+	    for(i=0;i<n;i++){
+	        if(j<c[i]){
+	            j=c[i];
+	            x=i;
+	        }
+	        else if(j==c[i]&&b[i]>b[x]){
+	        x=i;
+	        }
+	    }
+	    cout<<x+1<<endl;
+	}
+	return 0;
+}
