@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,s,n,k,r,x,y,z,i;
+cin>>t;i=z=0;
+while(t--){
+    cin>>s>>n>>k>>r;
+   if(r!=1){
+    x=k*((pow(r,n)-1)/(r-1));}
+    else{
+        x=n*k;
+    }
+    if(x<=s){
+        cout<<"POSSIBLE "<<(s-x)<<"\n";
+        i+=(s-x);
+    }
+    else{
+        cout<<"IMPOSSIBLE "<<(x-s)<<"\n";
+        z+=(x-s);
+    }
+}
+if(i>=z){
+    cout<<"POSSIBLE\n";
+}
+else{
+    cout<<"IMPOSSIBLE\n"; 
+}
+	return 0;
+}
