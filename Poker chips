@@ -1,0 +1,61 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int a,t,n,i,j,l,r,b,q,x,y;
+	cin>>t;
+	while(t--){
+	    cin>>n>>q;
+	  set<long long int>v;
+	    stack<long long int>s;
+	    x=v.size();
+	    for(i=0;i<n;i++){
+	        cin>>a;
+	     v.insert(a);
+	     y=v.size();
+	     if(x!=y){
+	         s.push(a);
+	     }
+	    
+	        x=y;
+	    }
+	    while(q--){
+	        cin>>b;
+	        if(b==1){
+	            cin>>l;
+	             x=v.size();
+	    for(i=0;i<l;i++){
+	        cin>>a;
+	     v.insert(a);
+	     y=v.size();
+	     if(x!=y){
+	         s.push(a);
+	         
+	     }
+	    
+	        x=y;
+	    }
+	    }
+	    else if(b==2){
+	        cin>>r;
+	        while(r--){
+	             if(s.size()==0||v.size()==0){
+	                break;
+	            }
+	            j=s.top();
+	            v.erase(j);
+	           
+	            s.pop();
+	           
+	        }
+	    }
+	    }
+	    while(!s.empty()){
+	        x=s.top();
+	        cout<<x<<" ";
+	        s.pop();
+	    }
+	    cout<<"\n";
+	}
+	return 0;
+}
