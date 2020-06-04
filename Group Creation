@@ -1,0 +1,49 @@
+#include <iostream>
+typedef long long ll; 
+using namespace std;
+
+int main() 
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int p=0;
+	    ll n,x;
+	    char d,l;
+	    cin>>n>>x;
+	    cin>>d>>l;
+	    if((d=='L')&&(l=='H'))
+	    {
+	        if(x%2!=0)
+	            cout<<x<<" H\n";
+	        else
+	            cout<<x<<" E\n";
+	    }
+	    else if((d=='L')&&(l=='E'))
+	    {
+	        if(x%2!=0)
+	            cout<<x<<" E\n";
+	        else
+	            cout<<x<<" H\n";
+	    }
+	    else if((d=='R')&&(l=='H'))
+	    {
+	        x=n-x+1;
+	        if(x%2!=0)
+	            cout<<x<<" H\n";
+	        else
+	            cout<<x<<" E\n";
+	    }
+	    else
+	    {
+	        x=n-x+1;
+	        if(x%2!=0)
+	            cout<<x<<" E\n";
+	        else
+	            cout<<x<<" H\n";
+	    }
+	}
+	return 0;
+}
+
