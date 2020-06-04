@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,i,j,n,m,x,y,d,f,b;
+cin>>t;
+while(t--){x=0;y=0;
+    cin>>n>>m;
+    long long int a[m],c[n];
+    vector<long long int>v;
+    for(i=0;i<m;i++){
+        cin>>a[i];
+    }
+    j=0;
+    i=0;
+    while(n--){
+        cin>>d>>f>>b;
+        if(a[d-1]>0){
+            x+=f;
+            a[d-1]--;
+           v.push_back(d);
+        }
+        else{
+          for(i=0;i<m;i++){
+              if(a[i]>j){
+                  j=a[i];
+                  y=i;
+              }
+          }
+          x+=b;
+          a[y]--;
+          v.push_back((y+1));
+        }
+        i++;
+    }
+   
+    cout<<x<<"\n";
+    for(auto j=v.begin();j!=v.end();j++){
+        cout<<*j<<" ";
+    }
+
+    cout<<"\n";
+}
+
+	return 0;
+}
