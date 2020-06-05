@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int t,i,j,n,x,y,z,k;
+cin>>t;
+while(t--){y=z=0;
+    cin>>n>>k;
+    for(i=0;i<n;i++){
+        cin>>x;
+        y+=x;
+        if(x<=k){
+            z+=x;
+        }
+        else{
+            z+=k;
+        }
+    }
+    j=y-z;
+    cout<<j<<endl;
+}
+	return 0;
+}
