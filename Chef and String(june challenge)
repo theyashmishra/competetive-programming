@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int t,i,j,x,y,z;
+char s[100000];
+cin>>t;
+while(t--){x=0;
+    cin>>s;
+    for(i=0;s[i]!='\0';i++){
+        if((s[i]=='x'&&s[i+1]=='y')||(s[i+1]=='x'&&s[i]=='y')){
+            x++;
+            i++;
+        }
+    }
+    cout<<x<<endl;
+}
+	return 0;
+}
