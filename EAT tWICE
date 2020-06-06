@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,n,i,j,x,y,m,k;
+cin>>t;
+while(t--){x=INT_MIN;k=0;
+    cin>>n>>m;
+    long long int d[n],v[n];
+    for(i=0;i<n;i++){
+        cin>>d[i]>>v[i];
+    }
+    for(i=0;i<n;i++){
+        if(v[i]>x){
+            x=v[i];
+            y=d[i];
+        }
+    }
+    k+=x;
+    x=INT_MIN;
+    for(i=0;i<n;i++){
+        if(v[i]>x&&d[i]!=y){
+            x=v[i];
+        }
+    }
+    k+=x;
+    cout<<k<<endl;
+}
+	return 0;
+}
