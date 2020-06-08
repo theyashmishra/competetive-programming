@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+long long int t,i,n,j,x,l,T,m,e;
+char s[100];
+cin>>t;
+while(t--){l=T=i=e=m=0;
+    cin>>s;
+    x=strlen(s);
+    if(x<9){
+        cout<<"NO\n";
+    }
+    else{
+        for(j=0;j<x;j++){
+            if(s[j]=='L'){
+                l++;
+            }
+            else  if(s[j]=='T'){
+                T++;
+            }
+            else  if(s[j]=='I'){
+                i++;
+            }
+            else  if(s[j]=='M'){
+                m++;
+            }
+            else  if(s[j]=='E'){
+                e++;
+            }
+        }
+        if(l>=2&&T>=2&&i>=2&&m>=2&&e>=2){
+            cout<<"YES\n";
+        }
+        else if(l==2&&T==2&&i==2&&m==2&&e==1&&x==9){
+            cout<<"YES\n";
+        }
+        else {
+            cout<<"NO\n";
+        }
+    }
+}
+	return 0;
+}
