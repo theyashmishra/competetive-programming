@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long int lli;
+int main() {
+lli t,i,j,n,x,z,e,o,q;
+cin>>t;
+while(t--){
+    set<lli>s;
+    cin>>n;
+    z=n;
+    while(n--){e=o=0;
+        cin>>q;
+        if(z==n){
+            s.insert(q);
+        }
+        else{
+            for(auto it=s.begin();it!=s.end();it++){
+                z=q^(*it);
+                s.insert(z);
+            }
+            s.insert(q);
+        }
+        for(auto it=s.begin();it!=s.end();it++){
+            j=__builtin_popcount(*it);
+            (j%2==0)?(e++):(o++);
+        }
+        cout<<e<<" "<<o<<endl;
+    }
+}
+	return 0;
+}
