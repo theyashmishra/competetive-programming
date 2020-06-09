@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int a,b,c,d,e,t,x,n,i;
+	cin>>t;
+	while(t--){e=c=d=0;
+	    cin>>n>>a>>b;
+	    for(i=0;i<n;i++){
+	        cin>>x;
+	        if(x%a==0&&x%b==0){
+	            e++;
+	            c++;+d++;
+	        }
+	        else if(x%a==0){
+	            c++;
+	        }
+	         else if(x%b==0){
+	            d++;
+	        }
+	    }
+	    if(e>0){
+	       
+	        if(d>c){
+	            cout<<"ALICE\n";
+	        }
+	        else {
+	            cout<<"BOB\n";
+	        }
+	    }
+  if(e==0){
+	       
+	        if(d>=c){
+	            cout<<"ALICE\n";
+	        }
+	        else {
+	            cout<<"BOB\n";
+	        }
+	    }
+	}
+	return 0;
+}
