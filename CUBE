@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int b,o,y,bl,g,r,t,i;
+	string s;
+	cin>>t;
+	while(t--){
+	    b=o=bl=y=r=g=0;
+	    i=0;while(i<6){
+	        cin>>s;
+	        if(s=="blue"){
+	            b++;
+	        }
+	        else if(s=="black"){
+	            bl++;
+	        }
+	        else if(s=="orange"){
+	            o++;
+	        }
+	        else if(s=="red"){
+	            r++;
+	        }
+	        else if(s=="green"){
+	            g++;
+	        }
+	        else if(s=="yellow"){
+	            y++;
+	        }
+	    i++;
+	        
+	    }
+	    if(b>=3||bl>=3||g>=3||r>=3||o>=3||y>=3){
+	        cout<<"YES\n";
+	    }
+	    else {
+	        cout<<"NO\n";
+	    }
+	    
+	}
+	return 0;
+}
