@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int p,q,r,a,b,c,x,y,z,l,m,n,t,u,v,w,d;
+cin>>t;
+while(t--){d=0;
+    cin>>p>>q>>r>>a>>b>>c;
+    x=a-p; y=b-q; z=c-r;
+   l=(p!=0)?(a/p):(0); 
+   m=(q!=0)?(b/q):(0);
+   n=(r!=0)?(c/r):(0);
+   u=a%p; v=b%q; w=c%r;
+   if((x==y&&y==z&&z==0)){
+       d=0;
+   }
+   else if((x==y&&y==z)||(x==y&&z==0)||(y==z&&x==0)||(z==x&&y==0)){
+       d=1;
+   }
+   else if((x==y&&y==0&&z!=0)||(x==z&&z==0&&y!=0)||(z==y&&y==0&&x!=0)||(l==m&&m==n&&u==v&&v==w&&w==0)){
+       d=1;
+   }
+   else if(((l==m&&n==1)||(l==n&&m==1)||(n==m&&l==1)||(l==m&&n!=1&&m==1)||(l==n&&m!=1&&l==1)||(n==m&&l!=1&&n==1))&&(u==v&&v==w&&w==0)){
+       d=1;
+   }
+   else if((y==(x+z))||(x==(y+z))||(z==(x+y))||((l==(m*n))&&(u==v&&v==w&&w==0))||((m==(l*n))&&(u==v&&v==w&&w==0))||((n==(l*m))&&(u==v&&v==w&&w==0)))
+   {
+       d=2;cout<<"&&";
+   }
+   else if((x==y&&z!=0)||(y==z&&x!=0)||(z==x&&y!=0)||(l==(m)&&n!=1&&(u==v&&v==w&&w==0))||(m==(n)&&l!=1&&(u==v&&v==w&&w==0))||(n==(l)&&m!=1&&(u==v&&v==w&&w==0))){
+                       
+       d=2;cout<<"&&&";
+   }
+   else if((x!=y&&z==0)||(y!=z&&x==0)||(z!=x&&y==0)){
+       d=2;cout<<"&2&";
+   }
+   cout<<d<<" ";
+}
+	return 0;
+}
