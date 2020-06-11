@@ -1,28 +1,47 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	long long t,i,n,j,x,y;
+	long long int t,n,x,y,z;
 	cin>>t;
-	while(t--){i=0,y=0;int a[9];
+	while(t--){
+	    z=y=0;
+	    vector<long long int>v;
 	    cin>>n;
-	    while(n){
-	        a[i]=n%10;
-	        n=n/10;
-	        i++;
+	    long long int i,k=n;
+	    while(k>0){
+	        x=k%10;
+	        v.push_back(x);
+	        k/=10;
 	    }
-	    for(j=i-1;j>0;j--){
-	        if(a[j]<a[j-1]){
-	            a[j+1]=0;
-	            x=1;
+	    reverse(v.begin(),v.end());
+	    long long int a[v.size()];
+	    auto it=v.begin();
+	    for(i=0;i<v.size();i++,it++){
+	        a[i]=*it;
+	       
+	    }
+	    for(i=0;i<v.size();i++){
+	        if(a[i]<a[i+1]){
+	            continue;
+	        }
+	        else {
+	            a[i]=0;
+	            z=i;
 	            break;
 	        }
 	    }
-	    if(x==0){a[i-1]=0;}
-	    for(j=i-1;j>=0;j--){
-	        y=y*10+a[j];
+	    if(z==0){
+	        a[0]=0;
 	    }
-	    cout<<y<<"\n";
-	}
+	    for(i=0;i<v.size();i++){
+	       if(i!=z){
+	       y+=a[i];
+	       y*=10;}
+	    }
+	    y/=10;
+	    cout<<y<<endl;
+	   }
 	return 0;
 }
+DISCSHOP
