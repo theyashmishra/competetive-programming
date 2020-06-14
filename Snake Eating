@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	long long int t,n,i,j,q,k,x,y,z;
+	long long int t,n,i,j,q,k,x,y,l,h;
 	cin>>t;
 	while(t--){
 	    cin>>n>>q;
@@ -13,25 +13,21 @@ int main() {
 	    }
 	    sort(a,a+n);
 	    while(q--){x=y=0;j=0;
+	    l=0;h=n-1;
 	        cin>>k;
-	    for(i=n-1;i>=0;i--){
-	        if(k<=a[i]){
-	            x++;
-	        }
-	        else if(k>a[i]){y=a[i];
-	            while(y<k&&i!=j){
-	                y+=1;
-	                j++;
-	            }
-	            if(y==k){x++;}
-	            if(i==j){
-	                break;
-	            }
-	            
-	        }
-	}
-	cout<<x<<"\n";
-	}
+	   while(l<h){
+	       if((a[h]+y)>=k){
+	           x++;
+	           y=0;
+	           h--;
+	       }
+	       else{
+	           l++;y++;
+	       }
+	   }
+	  	cout<<x<<"\n";
+	  	}
+		
 	}
 	return 0;
 }
