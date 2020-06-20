@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+void leftrotate(string &s, int d) 
+{ 
+	reverse(s.begin(), s.begin()+d); 
+	reverse(s.begin()+d, s.end()); 
+	reverse(s.begin(), s.end()); 
+} 
+
+int main() {
+long long int t,n,x,y,z,i,j;
+cin>>t;
+while(t--){y=0;
+    string s;
+    cin>>s;
+    x=stoi(s);
+     n=s.size();
+    if(x<0){
+        x=x-(2*x);
+        s.erase(0,1);
+        n--;
+        j=1;
+    }
+   
+    for(i=0;i<n-1;i++){
+        leftrotate(s,1);
+        y=stoi(s);
+        x=x*pow(10,n);
+        x+=y;
+        x=x%1000000007;
+    }
+    if(j==1){
+        x*=-1;
+        
+    } cout<<x<<endl;
+   
+}
+	return 0;
+}
