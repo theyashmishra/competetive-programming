@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+#include<math.h>
+using namespace std;
+
+int main(){
+    long long int t,a,b,c,x,d,n,y;
+    cin>>t;
+    while(t--){
+        cin>>a>>b>>c;
+        if(a<c){
+            x=1;
+            y=-1;
+        }
+        else{
+            x=-1;
+        }
+        
+        if(c<=a||(a*b)>c){
+            y=b;
+        }
+        else{
+            y=-1;
+        }
+        cout<<x<<" "<<y<<endl;
+}
+
+    return 0;
+}
