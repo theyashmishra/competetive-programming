@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#include<math.h>
+using namespace std;
+
+int main(){
+    long long int t,a,b,c,x,n;
+    char s[1000000];
+    cin>>t;
+    while(t--){a=b=x=0;
+       cin>>s;
+       n=strlen(s);
+       for(int i=0;i<n;i++){
+           if(s[i]=='-'){
+               a++;
+           }
+           else if(s[i]=='+'){
+               b++;
+           }
+           if(a>b){
+               x+=i+1;
+               b++;
+           }
+       }
+       x+=n;
+     cout<<x<<endl;
+}
+
+    return 0;
+}
