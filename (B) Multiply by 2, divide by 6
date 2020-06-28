@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+#include<math.h>
+using namespace std;
+
+int main(){
+    long long int t,a,b,c,x,y,z,k;
+
+    cin>>t;
+    while(t--){
+        c=b=0;
+        cin>>x;
+        y=x;
+        while(y!=1){
+            a=y%6;
+            if(a==0){
+                y=y/6;
+                c++;
+            }
+            else if(a==3){
+                y*=2;
+                y=y/6;
+                c+=2;
+            }
+            else{
+                break;
+            }
+        }
+        (y!=1)?cout<<"-1\n":cout<<c<<"\n";
+
+
+}
+
+    return 0;
+}
