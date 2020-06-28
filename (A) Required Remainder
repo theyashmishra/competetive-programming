@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+#include<math.h>
+using namespace std;
+
+int main(){
+    long long int t,a,b,c,x,y,z,k;
+  
+    cin>>t;
+    while(t--){
+        c=0;
+        cin>>x>>y>>k;
+     a=k/x;
+     b=k%x;
+     if(b>=y){
+         z=k-(b-y);
+     }
+     else{
+         if(a==0){
+             if(k>=y){
+                 z=y;
+             }
+             else{
+                 z=0;
+             }
+         }
+         else{
+             z=x*(a-1);
+             z+=y;
+         }
+     }
+     cout<<z<<"\n";
+     
+}
+
+    return 0;
+}
