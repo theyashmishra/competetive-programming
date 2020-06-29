@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+long long int n,i,j,x,y,z;
+cin>>n;
+while(n--){
+    cin>>i>>j;
+    x=0;
+    while(i!=j){
+        if(i>j){
+          i=i/2;
+            x++;
+        }
+       else{
+           j=j/2;
+             x++;
+       }
+          
+        
+    }
+    cout<<x<<endl;
+}
+	return 0;
+}
