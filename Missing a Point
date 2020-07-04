@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+     ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+long long int t,n,i,j,k,x,y;
+cin>>t;
+while(t--){
+    x=y=0;
+    map<long long int,long long int>m1;
+     map<long long int,long long int>m2;
+     
+    cin>>n;
+    n=(4*n)-1;
+    while(n--){
+        cin>>x>>y;
+     if(m1.find(x)==m1.end()){
+         m1.insert({x,1});
+     }
+     else{
+         m1[x]++;
+     }
+     if(m2.find(y)==m2.end()){
+         m2.insert({y,1});
+     }
+     else{
+         m2[y]++;
+     }
+    }
+    
+    for(auto it=m1.begin();it!=m1.end();it++){
+     
+       if((it->second)%2!=0){
+           i=it->first;
+           break;
+       }
+    }
+     for(auto it=m2.begin();it!=m2.end();it++){
+     
+       if((it->second)%2!=0){
+           j=it->first;
+           break;
+       }
+    }
+    cout<<i<<" "<<j<<endl;
+}
+	return 0;
+}
